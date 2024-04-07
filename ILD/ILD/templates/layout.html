@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - سامانه هوشمند تشخیص نشتی در شبکه آب رسانی</title>
+    
+    <link rel="stylesheet" type="text/css" href="/static/content/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+
+    <section class="vbox">
+    
+        <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="hide">
+              <a href="#"><i class="vh vh-bars-3" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+          <div class="navbar-header navbar-primary">
+            <a class="navbar-brand" href="{{ url_for('dashborad') }}">ILD</a>
+          </div>
+  
+          <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+  
+            <li class="dropdown dropdown-accordion" data-accordion="#accordion">
+  
+            </li>
+  
+            <li>
+              <a href="#">
+                <i class="vh vh-question" aria-hidden="true"></i>
+              </a>
+            </li>
+  
+          </ul>
+        </header>
+  
+        <section class="w-f scrollable">
+
+            {% block content %}{% endblock %}
+
+        </section>
+  
+        <footer id="footer" class="hidden-print">
+          <div class="text-center wrapper">
+            <div class="b-b line-lg pull-in"></div>
+            <p>
+              <small>&copy; 1402 <a class="text-primary" target="_blank" href="{{ url_for('dashborad') }}" tabindex="-1">سامانه هوشمند تشخیص نشتی در شبکه آب رسانی</a>
+                </small>
+            </p>
+          </div>
+        </footer>
+  
+      </section>
+
+    <script src="/static/scripts/jquery-1.12.4.min.js"></script>
+    <script src="/static/scripts/bootstrap.min.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    <script src="/static/scripts/script.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
