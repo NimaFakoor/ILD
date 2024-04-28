@@ -23,7 +23,7 @@
             </li>
           </ul>
           <div class="navbar-header navbar-primary">
-            <a class="navbar-brand" href="{{ url_for('dashborad') }}">ILD</a>
+            <a class="navbar-brand" href="{{ url_for('dashboard') }}">ILD</a>
           </div>
   
           <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
@@ -51,13 +51,17 @@
           <div class="text-center wrapper">
             <div class="b-b line-lg pull-in"></div>
             <p>
-              <small>&copy; 1402 <a class="text-primary" target="_blank" href="{{ url_for('dashborad') }}" tabindex="-1">سامانه هوشمند تشخیص نشتی در شبکه آب رسانی</a>
+              <small>&copy; 1402 <a class="text-primary" target="_blank" href="{{ url_for('dashboard') }}" tabindex="-1">سامانه هوشمند تشخیص نشتی در شبکه آب رسانی</a>
                 </small>
             </p>
           </div>
         </footer>
   
       </section>
+
+      {% for message in get_flashed_messages() %}
+        <div class="flash bg-primary box-shadow fadeOut">{{ message }}</div>
+      {% endfor %}
 
     <script src="/static/scripts/jquery-1.12.4.min.js"></script>
     <script src="/static/scripts/bootstrap.min.js"></script>
