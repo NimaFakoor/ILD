@@ -1,5 +1,5 @@
 __author__ = "NimaFakoor"
-__version__ = '0.1.9'
+__version__ = '0.9.6'
 
 """
 This script runs the ILD application using a development server.

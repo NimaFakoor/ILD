@@ -6,9 +6,17 @@ class Report(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     latitude = db.Column(db.String(100), nullable=True)
     longitude = db.Column(db.String(100), nullable=True)
+    radius = db.Column(db.String(100), nullable=True)
+    location = db.Column(db.String(100), nullable=True)
     origin = db.Column(db.String(100), nullable=True)
     phone = db.Column(db.String(100), nullable=True)
     description = db.Column(db.Text, nullable=True)
+    logdate = db.Column(db.DateTime, nullable=False, default=datetime.now())
+
+class Zones(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    zone = db.Column(db.String(100), nullable=True)
+    file_address = db.Column(db.String(100), nullable=True)
     logdate = db.Column(db.DateTime, nullable=False, default=datetime.now())
 
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

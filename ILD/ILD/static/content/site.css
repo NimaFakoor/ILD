@@ -1,150 +1,198 @@
+.card {
+  margin: 10%;
+}
+
+.input-group {
+  margin: 5%;
+}
+
 .box-shadow {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  }
-  .bg-primary {
-    color: #ddd1ef;
-    background-color: #4484ff;
-  }
-  .bg-primary .text-muted {
-    color: #f9f7fc !important;
-  }
-  .bg-primary .nav > li > a,
-  .bg-primary a,
-  .bg-primary .nav > li .icon-search {
-    color: #f9f7fc;
-  }
-  .bg-primary .nav > li > a:hover,
-  .bg-primary a:hover,
-  .bg-primary .nav > li .icon-search:hover,
-  .bg-primary .nav > li > a:focus,
-  .bg-primary a:focus,
-  .bg-primary .nav > li .icon-search:focus,
-  .bg-primary .nav > li > a:active,
-  .bg-primary a:active,
-  .bg-primary .nav > li .icon-search:active {
-    background-color: #4484ff;
-  }
-  a {
-    color: #4484ff;
-  }
-  a:hover,
-  a:focus,
-  a:active {
-    color: #4484ff;
-  }
-  .search {
-    color: #f9f7fc;
-  }
-  .search:focus {
-    border-color: #4484ff;
-  }
-  .text-primary {
-    color: #4484ff;
-  }
-  a.text-primary {
-    color: #4484ff;
-  }
-  a.text-primary:hover,
-  a.text-primary:focus,
-  a.text-primary:active {
-    color: #4484ff;
-  }
-  .db-list {
-    margin: 15px;
-  }
-  .db-list ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.bg-warning {
+  color: #ddd1ef;
+  background-color: #fffb00;
+}
+
+.bg-primary {
+  color: #ddd1ef;
+  background-color: #4484ff;
+}
+
+.bg-primary .text-muted {
+  color: #f9f7fc !important;
+}
+
+.bg-primary .nav>li>a,
+.bg-primary a,
+.bg-primary .nav>li .icon-search {
+  color: #f9f7fc;
+}
+
+.bg-primary .nav>li>a:hover,
+.bg-primary a:hover,
+.bg-primary .nav>li .icon-search:hover,
+.bg-primary .nav>li>a:focus,
+.bg-primary a:focus,
+.bg-primary .nav>li .icon-search:focus,
+.bg-primary .nav>li>a:active,
+.bg-primary a:active,
+.bg-primary .nav>li .icon-search:active {
+  background-color: #4484ff;
+}
+
+a {
+  color: #4484ff;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #4484ff;
+}
+
+.search {
+  color: #f9f7fc;
+}
+
+.search:focus {
+  border-color: #4484ff;
+}
+
+.text-primary {
+  color: #4484ff;
+}
+
+a.text-primary {
+  color: #4484ff;
+}
+
+a.text-primary:hover,
+a.text-primary:focus,
+a.text-primary:active {
+  color: #4484ff;
+}
+
+.db-list {
+  margin: 15px;
+}
+
+.db-list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.db-list ul li {
+  display: inline-table;
+  margin: 3.5em 3% 2em;
+  width: 10em;
+  vertical-align: top;
+}
+
+@media (max-width: 767px) {
   .db-list ul li {
-    display: inline-table;
-    margin: 3.5em 3% 2em;
-    width: 10em;
-    vertical-align: top;
+    margin: 0.5em 1.85em;
   }
-  @media (max-width: 767px) {
-    .db-list ul li {
-      margin: 0.5em 1.85em;
-    }
-  }
-  .db-list ul li a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-  }
-  .db-list ul li a .db-icon {
-    width: 18em;
-    height: 18em;
-    padding: 5.25em;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #4484ff;
-    transition: all 1s ease-in-out;
-  }
-  .db-list ul li a .db-icon i {
-    color: #ddd1ef;
-    background-color: transparent;
-    font-size: 8em;
-  }
-  .db-list ul li a .db-icon-name {
-    display: block;
-    color: #58666e;
-    padding: 0;
-    margin: 0.5em -1em;
-    font-size: 3.125em;
-    transition: all 1s ease-in-out;
-  }
-  .db-list ul li a.active,
-  .db-list ul li a:active,
-  .db-list ul li a:focus,
-  .db-list ul li a:hover {
-    text-decoration: none;
-  }
-  .db-list ul li a.active .db-icon,
-  .db-list ul li a:active .db-icon,
-  .db-list ul li a:focus .db-icon,
-  .db-list ul li a:hover .db-icon {
-    color: #ddd1ef;
-    background-color: #4484ff;
-  }
-  .db-list ul li a.active .db-icon i,
-  .db-list ul li a:active .db-icon i,
-  .db-list ul li a:focus .db-icon i,
-  .db-list ul li a:hover .db-icon i {
-    color: #ddd1ef;
-    background-color: transparent;
-  }
-  .db-list ul li a.active .db-icon-name,
-  .db-list ul li a:active .db-icon-name,
-  .db-list ul li a:focus .db-icon-name,
-  .db-list ul li a:hover .db-icon-name {
-    color: #4484ff;
-  }
+}
+
+.db-list ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.db-list ul li a .db-icon {
+  width: 18em;
+  height: 18em;
+  padding: 5.25em;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #4484ff;
+  transition: all 1s ease-in-out;
+}
+
+.db-list ul li a .db-icon i {
+  color: #ddd1ef;
+  background-color: transparent;
+  font-size: 8em;
+}
+
+.db-list ul li a .db-icon-name {
+  display: block;
+  color: #58666e;
+  padding: 0;
+  margin: 0.5em -1em;
+  font-size: 3.125em;
+  transition: all 1s ease-in-out;
+}
+
+.db-list ul li a.active,
+.db-list ul li a:active,
+.db-list ul li a:focus,
+.db-list ul li a:hover {
+  text-decoration: none;
+}
+
+.db-list ul li a.active .db-icon,
+.db-list ul li a:active .db-icon,
+.db-list ul li a:focus .db-icon,
+.db-list ul li a:hover .db-icon {
+  color: #ddd1ef;
+  background-color: #4484ff;
+}
+
+.db-list ul li a.active .db-icon i,
+.db-list ul li a:active .db-icon i,
+.db-list ul li a:focus .db-icon i,
+.db-list ul li a:hover .db-icon i {
+  color: #ddd1ef;
+  background-color: transparent;
+}
+
+.db-list ul li a.active .db-icon-name,
+.db-list ul li a:active .db-icon-name,
+.db-list ul li a:focus .db-icon-name,
+.db-list ul li a:hover .db-icon-name {
+  color: #4484ff;
+}
 
 .flash {
-  
+
   position: fixed;
   font-size: 20px;
   top: 70px;
   width: 100%;
   text-align: center;
-  -webkit-animation-duration: 10s;animation-duration: 10s;
-  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 
 }
 
 @-webkit-keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .fadeOut {

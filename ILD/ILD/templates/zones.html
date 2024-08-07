@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<section class="hbox">
+    <aside class="aside-lg hide"></aside>
+    <section>
+        <div class="container">
+            <div class="panel no-borders">
+                <div class="panel-body">
+                    <div class="db-list text-center">
+                        <ul>
+                            {% for index in zones %}
+                            <li>
+                                <a href="{{ url_for('zone_view', sid = index.id) }}"
+                                class="btn btn-primary">
+                                {{ index.zone }}
+                            </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% endblock %}

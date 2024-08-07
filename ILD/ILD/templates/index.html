@@ -3,48 +3,57 @@
 {% block content %}
 
 <section class="hbox">
-    <aside class="aside-lg hide"></aside>
-    <section>
-      <div class="container">
-        <div class="panel no-borders">
-          <div class="panel-body">
-            <div class="db-list text-center">
-              <ul>
+  <aside class="aside-lg hide"></aside>
+  <section>
+    <div class="container">
+      <div class="panel no-borders">
+        <div class="panel-body">
+          <div class="db-list text-center">
+            <ul>
 
-                <li>
-                  <a href="{{ url_for('report') }}">
-                    <div class="db-icon">
-                      <i class="vh vh-contract-type" aria-hidden="true"></i>
-                    </div>
-                    <div class="db-icon-name">گزارش نشتی</div>
-                  </a>
-                </li>
+              <li>
+                <a href="#">
+                  <div class="db-icon">
+                    <i class="vh vh-report" aria-hidden="true"></i>
+                  </div>
+                  <div class="db-icon-name">تشخیص هوشمند</div>
+                </a>
+              </li>
 
-                <li>
-                  <a href="#">
-                    <div class="db-icon">
-                      <i class="vh vh-search" aria-hidden="true"></i>
-                    </div>
-                    <div class="db-icon-name">نقشه</div>
-                  </a>
-                </li>
+              <li>
+                <a href="{{ url_for('zones') }}">
+                  <div class="db-icon">
+                    <i class="vh vh-search" aria-hidden="true"></i>
+                  </div>
+                  <div class="db-icon-name">نقشه مناطق</div>
+                </a>
+              </li>
 
-                <li>
-                  <a href="#">
-                    <div class="db-icon">
-                      <i class="vh vh-manage-portal" aria-hidden="true"></i>
-                    </div>
-                    <div class="db-icon-name">تشخیص هوشمند</div>
-                  </a>
-                </li>
+              <li>
+                <a href="{{ url_for('report') }}">
+                  <div class="db-icon">
+                    <i class="vh vh-contract-type" aria-hidden="true"></i>
+                  </div>
+                  <div class="db-icon-name">گزارش نشتی</div>
+                </a>
+              </li>
 
-              </ul>
+              <li>
+                <a href="{{ url_for('administrator') }}">
+                  <div class="db-icon">
+                    <i class="vh vh-manage-portal" aria-hidden="true"></i>
+                  </div>
+                  <div class="db-icon-name">مدیریت سامانه</div>
+                </a>
+              </li>
 
-            </div>
+            </ul>
+
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </section>
+</section>
 
 {% endblock %}

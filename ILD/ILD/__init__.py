@@ -17,11 +17,15 @@ SECRET_KEY = "Sarina+Kiana"
 DATABASE = 'sqlite:///../ILD/database/local_DB.db'
 SQLALCHEMY_ECHO = True
 UPLOAD_FOLDER = 'ILD\\static\\uploads'
+UPLOAD_FOLDER_ZONES = 'ILD\\static\\uploads\\zones'
+UPLOAD_FOLDER_IMAGES = 'ILD\\static\\images'
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER_ZONES'] = UPLOAD_FOLDER_ZONES
+app.config['UPLOAD_FOLDER_IMAGES'] = UPLOAD_FOLDER_IMAGES
 
 db = SQLAlchemy(app,session_options={"autoflush": False})
 

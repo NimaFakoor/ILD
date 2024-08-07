@@ -12,3 +12,6 @@ setuptools
 typing-extensions
 Werkzeug
 zipp
+#
+geopandas
+wntr

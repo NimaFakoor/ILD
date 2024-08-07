@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<section class="hbox">
+    <aside class="aside-lg hide"></aside>
+    <section>
+        <div class="container">
+            <div class="panel no-borders">
+                <div class="panel-body">
+                    <div class="db-list text-center">
+                        <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='images/plot.png') }}"> 
+                </li>
+                <li> {{ result_describe }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+{% endblock %}
