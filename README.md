@@ -1,5 +1,5 @@
 # ILD
- سامانه هوشمند تشخیص نشتی در شبکه آب رسانی
+ سامانه تحلیل شبکه های توزیع آب 
 
 ### requirements
 
@@ -9,3 +9,8 @@
 ### run
 
         python runserver.py
+
+
+#### EPANET compatible python package to simulate and analyze water distribution networks under disaster scenarios.
+
+        https://github.com/USEPA/WNTR
