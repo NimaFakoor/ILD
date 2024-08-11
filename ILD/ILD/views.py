@@ -262,12 +262,38 @@ def zone_view(sid):
 
     zn = Zones.query.filter(Zones.id == sid).first()
     wn = wntr.network.WaterNetworkModel(os.path.join(app.config['UPLOAD_FOLDER_ZONES'], zn.file_address))
-    result_describe = wn.describe(level=1)
-    
+    fname=str(wn.title[0])
+
     return render_template(
         'zone_view.html',
-        result_describe=result_describe,
+        file_name=fname,
         title='مناطق'
     )
 
+
+@app.route('/networks')
+def networks():
+    """Renders the networks page."""
+
+
+    zones = Zones.query.order_by(Zones.id.asc()).all()
+    return render_template(
+        'networks.html',
+        zones=zones,
+        title='شبکه آبرسانی'
+    )
+
+@app.route("/networks/<sid>", methods=['POST', 'GET'])
+def network_view(sid):
+    """network view """
+
+    zn = Zones.query.filter(Zones.id == sid).first()
+    wn = wntr.network.WaterNetworkModel(os.path.join(app.config['UPLOAD_FOLDER_ZONES'], zn.file_address))
+    fname=str(wn.title[0])
+
+    return render_template(
+        'network_view.html',
+        file_name=fname,
+        title='شبکه آبرسانی'
+    )
 
