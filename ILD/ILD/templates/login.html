@@ -2,45 +2,62 @@
 
 {% block content %}
 
-{% if error %}
-<p class="flash bg-warning box-shadow fadeOut">
-  {{ error }}
-</p>
-{% endif %}
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+  </section>
 
-<div class="card">
-  <div class="card-body login-card-body">
+  <!-- Main content -->
+  <section class="content">
 
-    <form action="{{ url_for('login') }}" method="post">
-      <div class="input-group mb-3">
-        <input type="text" name="username" class="form-control" placeholder="نام کاربری" />
-        <div class="input-group-append">
-          <div class="input-group-text">
-            <span class="fas fa-user"></span>
-          </div>
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <input type="password" name="password" class="form-control" placeholder="رمز عبور" />
-        <div class="input-group-append">
-          <div class="input-group-text">
-            <span class="fas fa-lock"></span>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-8">
-        </div>
-        <!-- /.col -->
-        <div class="col-4">
-          <button type="submit" class="btn btn-primary btn-block" value="Login">ورود</button>
-        </div>
-        <!-- /.col -->
-      </div>
-    </form>
+    <div class="login-box" style="position: absolute;top: 25%;left: 5%;">
 
-  </div>
-  <!-- /.login-card-body -->
+      <div class="card">
+        <div class="card-body login-card-body">
+
+          {% if error %}
+          <p class="login-box-msg">
+            {{ error }}
+          </p>
+          {% endif %}
+
+          <form action="{{ url_for('login') }}" method="post">
+            <div class="input-group mb-3">
+              <input type="text" name="username" class="form-control" placeholder="نام کاربری" />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" name="password" class="form-control" placeholder="رمز عبور" />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8">
+              </div>
+              <!-- /.col -->
+              <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block" value="Login">ورود</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+
+        </div>
+        <!-- /.login-card-body -->
+      </div>
+
+    </div>
+    <!-- /.login-box -->
+
+  </section>
+  <!-- /.content -->
 </div>
 
 {% endblock %}

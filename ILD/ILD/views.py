@@ -149,12 +149,12 @@ def custom_wntr(wnt):
     AED = wntr.metrics.average_expected_demand(wn)
     wntr.graphics.plot_network(wn, node_attribute=AED, node_range=(0,0.025), title='Average expected demand (m$^3$/s)',filename=fa)
     ''''''''
-    adrs="ILD/static/images/plot_network/large_pipe_diameters/"
-    fa=adrs+fname
-    # Return pipes diameters > 12 inches
-    large_pipe_diameters = wn.query_link_attribute('diameter', np.greater, 12*0.0254)
-    # Plot pipes diameters > 12 inches
-    wntr.graphics.plot_network(wn, link_attribute=large_pipe_diameters, node_size=0, link_width=2, title="Pipes with diameter > 12 inches",filename=fa)
+    # adrs="ILD/static/images/plot_network/large_pipe_diameters/"
+    # fa=adrs+fname
+    # # Return pipes diameters > 12 inches
+    # large_pipe_diameters = wn.query_link_attribute('diameter', np.greater, 12*0.0254)
+    # # Plot pipes diameters > 12 inches
+    # wntr.graphics.plot_network(wn, link_attribute=large_pipe_diameters, node_size=0, link_width=2, title="Pipes with diameter > 12 inches",filename=fa)
     ''''''''
     adrs="ILD/static/images/plot_network/pressure_at_5hr/"
     fa=adrs+fname

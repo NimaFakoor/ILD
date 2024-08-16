@@ -2,58 +2,66 @@
 
 {% block content %}
 
-<section class="hbox">
-  <aside class="aside-lg hide"></aside>
-  <section>
-    <div class="container">
-      <div class="panel no-borders">
-        <div class="panel-body">
-          <div class="db-list text-center">
-            <ul>
-
-              <li>
-                <a href="{{ url_for('networks') }}">
-                  <div class="db-icon">
-                    <i class="vh vh-report" aria-hidden="true"></i>
-                  </div>
-                  <div class="db-icon-name">گزارش هوشمند شبکه</div>
-                </a>
-              </li>
-
-              <li>
-                <a href="{{ url_for('zones') }}">
-                  <div class="db-icon">
-                    <i class="vh vh-search" aria-hidden="true"></i>
-                  </div>
-                  <div class="db-icon-name">گزارش نقشه مناطق</div>
-                </a>
-              </li>
-
-              <li>
-                <a href="{{ url_for('report') }}">
-                  <div class="db-icon">
-                    <i class="vh vh-contract-type" aria-hidden="true"></i>
-                  </div>
-                  <div class="db-icon-name">گزارش نشتی</div>
-                </a>
-              </li>
-
-              <li>
-                <a href="{{ url_for('administrator') }}">
-                  <div class="db-icon">
-                    <i class="vh vh-manage-portal" aria-hidden="true"></i>
-                  </div>
-                  <div class="db-icon-name">مدیریت سامانه</div>
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
   </section>
-</section>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6">
+
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="card-title" style="margin-left: 80%;">گزارش نشتی</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title"></h6>
+              <p class="card-text"></p>
+              <a href="{{ url_for('report') }}" class="btn btn-primary">ورود</a>
+            </div>
+          </div>
+          <!-- /.card -->
+
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="card-title" style="margin-left: 70%;">گزارش نقشه مناطق</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title"></h6>
+              <p class="card-text"></p>
+              <a href="{{ url_for('zones') }}" class="btn btn-primary">بررسی</a>
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="card-title" style="margin-left: 70%;">گزارش هوشمند شبکه</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title"></h6>
+              <p class="card-text"></p>
+              <a href="{{ url_for('networks') }}" class="btn btn-primary">بررسی</a>
+            </div>
+          </div>
+          <!-- /.card -->
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- /.content -->
+</div>
 
 {% endblock %}
