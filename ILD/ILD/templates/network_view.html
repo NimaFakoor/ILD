@@ -2,36 +2,66 @@
 
 {% block content %}
 
-<section class="hbox">
-    <aside class="aside-lg hide"></aside>
-    <section>
-        <div class="container">
-            <div class="panel no-borders">
-                <div class="panel-body">
-                    <div class="db-list text-center">
-                        <ul>
-                            <li>
-                                <img
-                                    src="{{ url_for('static', filename='images/plot_network/expected_demand/{}.png'.format(file_name)) }}">
-                            </li>
-                            <li>
-                                <img
-                                    src="{{ url_for('static', filename='images/plot_network/average_expected_demand/{}.png'.format(file_name)) }}">
-                            </li>
-                            <li>
-                                <img
-                                    src="{{ url_for('static', filename='images/plot_network/plot_fragility_curve/{}.png'.format(file_name)) }}">
-                            </li>
-                            <li>
-                                <img
-                                    src="{{ url_for('static', filename='images/plot_network/link_segments/{}.png'.format(file_name)) }}">
-                            </li>
-                        </ul>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4 class="card-title">تقاضای مورد انتظار در شبکه</h4>
+                </div>
+                <div class="card-body">
+                    <div style="margin-left: 30%;">
+                        <img
+                            src="{{ url_for('static', filename='images/plot_network/expected_demand/{}.png'.format(file_name)) }}">
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4 class="card-title">متوسط ​​تقاضای مورد انتظار در شبکه آبرسانی</h4>
+                </div>
+                <div class="card-body">
+                    <div style="margin-left: 30%;">
+                        <img
+                            src="{{ url_for('static', filename='images/plot_network/average_expected_demand/{}.png'.format(file_name)) }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4 class="card-title">منحنی شکنندگی طرح</h4>
+                </div>
+                <div class="card-body">
+                    <div style="margin-left: 30%;">
+                        <img
+                            src="{{ url_for('static', filename='images/plot_network/plot_fragility_curve/{}.png'.format(file_name)) }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4 class="card-title">پیوند بخش ها</h4>
+                </div>
+                <div class="card-body">
+                    <div style="margin-left: 30%;">
+                        <img
+                            src="{{ url_for('static', filename='images/plot_network/link_segments/{}.png'.format(file_name)) }}">
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
     </section>
-</section>
+    <!-- /.content -->
+</div>
 
 {% endblock %}
