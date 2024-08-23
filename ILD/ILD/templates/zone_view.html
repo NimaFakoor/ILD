@@ -2,58 +2,52 @@
 
 {% block content %}
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-    </section>
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h4 class="card-title">میانگین عمر آب در شبکه</h4>
+            </div>
+            <div class="card-body">
+                <div style="margin-left: 30%;">
 
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h4 class="card-title">میانگین عمر آب در شبکه</h4>
-                </div>
-                <div class="card-body">
-                    <div style="margin-left: 30%;">
+                    <img
+                        src="{{ url_for('static', filename='images/plot_network/average_age/{}.png'.format(file_name)) }}">
 
-                        <img
-                            src="{{ url_for('static', filename='images/plot_network/average_age/{}.png'.format(file_name)) }}">
-
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h4 class="card-title">فشار آب در 5 ساعت</h4>
-                </div>
-                <div class="card-body">
-                    <div style="margin-left: 30%;">
-                        <img
-                            src="{{ url_for('static', filename='images/plot_network/pressure_at_5hr/{}.png'.format(file_name)) }}">
-                    </div>
+        <div class="card card-primary">
+            <div class="card-header">
+                <h4 class="card-title">فشار آب در 5 ساعت</h4>
+            </div>
+            <div class="card-body">
+                <div style="margin-left: 30%;">
+                    <img
+                        src="{{ url_for('static', filename='images/plot_network/pressure_at_5hr/{}.png'.format(file_name)) }}">
                 </div>
             </div>
+        </div>
 
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h4 class="card-title">جمعیت تحت تاثیر قرار گرفته</h4>
-                </div>
-                <div class="card-body">
-                    <div style="margin-left: 30%;">
-                        <img
-                            src="{{ url_for('static', filename='images/plot_network/pop_impacted/{}.png'.format(file_name)) }}">
-                    </div>
+        <div class="card card-primary">
+            <div class="card-header">
+                <h4 class="card-title">جمعیت تحت تاثیر قرار گرفته</h4>
+            </div>
+            <div class="card-body">
+                <div style="margin-left: 30%;">
+                    <img
+                        src="{{ url_for('static', filename='images/plot_network/pop_impacted/{}.png'.format(file_name)) }}">
                 </div>
             </div>
+        </div>
 
 
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-</div>
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
 
 <!--
                                 <img

@@ -79,9 +79,16 @@
     </nav>
     <!-- /.navbar -->
 
-    <!-- Content Wrapper. Contains page content -->
-    {% block content %}{% endblock %}
-    <!-- /.content-wrapper -->
+
+    <div class="content-wrapper"
+      style="background-image: url('../static/images/WP.jpg');background-size: 100%;background-position: 0px -300px;">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+      </section>
+      <!-- Content Wrapper. Contains page content -->
+      {% block content %}{% endblock %}
+      <!-- /.content-wrapper -->
+    </div>
 
     <!-- Main Footer -->
     <footer class="main-footer">

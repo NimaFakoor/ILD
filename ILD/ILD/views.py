@@ -270,7 +270,6 @@ def zone_view(sid):
         title='مناطق'
     )
 
-
 @app.route('/networks')
 def networks():
     """Renders the networks page."""
@@ -296,4 +295,3 @@ def network_view(sid):
         file_name=fname,
         title='شبکه آبرسانی'
     )
-
